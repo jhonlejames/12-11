@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vendo Machine</title>
+	<script type="text/javascript" src="index2.js"></script>
+	<style>
+		label
+		{
+			font-size: 40px;
+			color: red;
+			margin-left: 580px;
+		}
+	input{	
+		margin-left: 570px;
+		color: orange;
+	}
+	h3{
+		margin-left: 600px;
+		color: red;
+	}
+	</style>
+</head>
+<body>
+	<label>Amount:</label><br>
+
+	<input type="text" id="value"><br><br><br>
+	<input type="button" value="350ml" onclick="button1()" style="margin-right: 300px;">
+	<input type="button" value="450ml" onclick="button2()" style="margin-right: 300px;">	
+	<input type="button" value="750ml" onclick="button3()" style="margin-right: 300px;">
+	
+	<h3 id="change">Insert Amount</h3>
+
+<script type="text/javascript">
+	function button1()
+{
+	var a=document.getElementById('value').value;
+	a=Number(a);
+	if ((a>=25)==true)
+	{
+		var b=a-25;
+		document.getElementById('change').innerHTML="Thank you for buying come back again. Here's your change: "+b;
+		alert('enjoy')
+	}
+	else
+	{
+		var b=25-a;
+		alert('Your money is not enough!!');
+		document.getElementById('change').innerHTML="Your money needs "+b+" more to avail this one";
+	}
+}
+function button2()
+{
+	var a=document.getElementById('value').value;
+	a=Number(a);
+	if ((a>=30)==true)
+	{
+		var b=a-30;
+		document.getElementById('change').innerHTML="Thank you for buying come back again. Here's your change: "+b;
+		alert('enjoy')
+	}
+	else
+	{
+		var b=30-a;
+		alert('Your money is not enough!!');
+		document.getElementById('change').innerHTML="Your money needs "+b+" more to avail this one";
+	}
+}
+function button3()
+{
+	var a=document.getElementById('value').value;
+	a=Number(a);
+	if ((a>=50)==true)
+	{
+		var b=a-50;
+		document.getElementById('change').innerHTML="Thank you for buying come back again. Here's your change:"+b;
+		alert('enjoy')
+	}
+	else
+	{
+		var b=50-a;
+		alert('Your money is not enough!!');
+		document.getElementById('change').innerHTML="Your money needs "+b+" more to avail this one";
+	}
+}
+</script>
+</body>
+</html>
